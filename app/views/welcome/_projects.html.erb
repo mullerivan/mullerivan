@@ -1,0 +1,21 @@
+<div class="section">
+  <a id="projects"></a>
+  <h2 class="styled">Projects: Products and Experiences</h2>
+  <% Project.all.each do |p| %>
+      <div class="project clearfix">
+        <div class="info">
+          <h3 class="styled"><%=p.name  %> </h3>
+          <p class="link">
+            <span>Link:</span>
+          </p>
+          <p class="link">Role: Senior Engineer → Infrastructure Engineer</p>
+          <p><%= p.description %></p>
+        </div>
+        <div class="screenshots">
+          <img alt="<%= p.name %>" src="" title="<%= p.name %>">
+        </div>
+      </div>
+  <% end %>
+</div>    <!--end section  PROJECTS-->
+
+

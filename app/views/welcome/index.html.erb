@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <%= render :partial => 'meta' %>
+  <title>Ivan Muller Software developer</title>
+</head>
+<body>
+<div id="wrapper" style="opacity: 1;">
+  <div id="content">
+    <div class="content">
+      <h1 class="major">Ivan Muller</h1>
+      <h2>Software developer</h2>
+
+      <%= render :partial => 'biography' %>
+
+      <div class="section" >
+        <a id="skills"></a>
+        <h2 class="styled">Skill Sets and Methodologies</h2>
+        <div class="talentz clearfix">
+          <%= render :partial => 'skills' %>
+          <%= render :partial => 'concepts' %>
+          <%= render :partial => 'people' %>
+        </div>      <!--end talentz clearfix-->
+      </div>   <!--end section SKILLS-->
+
+      <%= render :partial => 'projects' %>
+      <%= render :partial => 'open_source' %>
+    </div>      <!-- end content-->
+
+    <%= render :partial => 'footer' %>
+
+  </div>   <!-- end content id-->
+</div> <!-- end wrapper-->
+</body>
+</html>
