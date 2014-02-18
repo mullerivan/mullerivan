@@ -1,21 +1,38 @@
 <div class="section">
   <a id="projects"></a>
+
   <h2 class="styled">Projects: Products and Experiences</h2>
-  <% Project.all.each do |p| %>
-      <div class="project clearfix">
-        <div class="info">
-          <h3 class="styled"><%=p.name  %> </h3>
-          <p class="link">
-            <span>Link:</span>
-          </p>
-          <p class="link">Role: Senior Engineer → Infrastructure Engineer</p>
-          <p><%= p.description %></p>
-        </div>
-        <div class="screenshots">
-          <img alt="<%= p.name %>" src="" title="<%= p.name %>">
-        </div>
+
+  <div class="talentz clearfix">
+
+    <div class="natural">
+      <h3 class="styled">Integrated System UCALP Library </h3>
+
+      <p class="description">In this project I have developed the system with 2 senior PHP developers with the
+        framework Symfony 1.4 on a Windows server with SqlServer
+        We used Reverse engineering by taking an existing database for a old program and
+        created a new web system for the library
+        Functions: searches reserves, lends of books, Update new Documents and edit the
+        existent DB Users management, and Students management, Reports etc..
+        Version control: svn</p>
+
+
+      <div class="concept">
+
+        <p class="link">Link:
+          <a href="biblio.ucalp.edu.ar" title="biblio.ucalp.edu.ar" alt="biblio.ucalp.edu.ar"> biblio.ucalp.edu.ar</a>
+        </p>
+
+        <p class="role">Role: Team leader → Infrastructure Engineer → Developer</p>
+        <p class="client">UCALP</p>
       </div>
-  <% end %>
+
+    </div>
+    <div class="screenshots">
+      <link rel="image_src" href="http://biblio.ucalp.edu.ar"/>
+    </div>
+  </div>
+
 </div>    <!--end section  PROJECTS-->
 
 

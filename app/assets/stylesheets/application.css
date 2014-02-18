@@ -283,6 +283,10 @@ h1.major, h1.major + h2 {
   position: relative;
   padding: 40px 0;
   margin-top: 50px; }
+.section p {
+    margin: 1em 1em 1em 1em;
+
+}
 
 .arrow_title {
   font-family: 'Titillium Web', sans-serif;
