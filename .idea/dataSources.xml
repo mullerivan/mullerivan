@@ -1,49 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2388087071">
-    <data-source source="LOCAL" name="Rails mullerivan: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="d1865468-b0fd-48dd-8aef-366642c13bf2">
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1/mullerivan_production</jdbc-url>
-      <user-name>root</user-name>
-      <user-password>dfc3dfc7</user-password>
+  <component name="DataSourceManagerImpl" format="xml" hash="3684825882">
+    <data-source source="LOCAL" name="Rails mullerivan: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="422035a6-0c1a-49f1-a6ba-e58a5f11de85">
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
       <libraries>
         <library>
-          <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/mysql-connector-license.txt</url>
+          <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/xerial-sqlite-license.txt</url>
         </library>
         <library>
-          <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/mysql-connector-java-5.1.22-bin.jar</url>
+          <url>jar://$USER_HOME$/.RubyMine50/config/jdbc-drivers/sqlite-jdbc-3.7.6.3-20110609.081603-3.jar!/</url>
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Rails mullerivan: development" product="MySQL" version="5.5.34-0ubuntu0.13.04.1" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )" uuid="a0f58d77-ffc9-4a1d-ac87-3f2704cacbfe">
-      <extra-name-characters>#@</extra-name-characters>
-      <identifier-quote-string>`</identifier-quote-string>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1/mullerivan_dev</jdbc-url>
-      <user-name>root</user-name>
-      <user-password>dfc3dfc7</user-password>
+    <data-source source="LOCAL" name="Rails mullerivan: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="65e8a025-5337-4085-bfff-228f651de694">
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/production.sqlite3</jdbc-url>
       <libraries>
         <library>
-          <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/mysql-connector-license.txt</url>
+          <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/xerial-sqlite-license.txt</url>
         </library>
         <library>
-          <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/mysql-connector-java-5.1.22-bin.jar</url>
+          <url>jar://$USER_HOME$/.RubyMine50/config/jdbc-drivers/sqlite-jdbc-3.7.6.3-20110609.081603-3.jar!/</url>
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Rails mullerivan: test" product="MySQL" version="5.5.34-0ubuntu0.13.04.1" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )" uuid="a73ec79a-2ce0-4fb4-951a-6c5f04d041a3">
-      <extra-name-characters>#@</extra-name-characters>
-      <identifier-quote-string>`</identifier-quote-string>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1/mullerivan_test</jdbc-url>
-      <user-name>root</user-name>
-      <user-password>dfc3dfc7</user-password>
+    <data-source source="LOCAL" name="Rails mullerivan: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="05e93746-b051-4784-97cd-b2274ae20e90">
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
       <libraries>
         <library>
-          <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/mysql-connector-license.txt</url>
+          <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/xerial-sqlite-license.txt</url>
         </library>
         <library>
-          <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/mysql-connector-java-5.1.22-bin.jar</url>
+          <url>jar://$USER_HOME$/.RubyMine50/config/jdbc-drivers/sqlite-jdbc-3.7.6.3-20110609.081603-3.jar!/</url>
         </library>
       </libraries>
     </data-source>
