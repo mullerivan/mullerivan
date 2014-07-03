@@ -220,7 +220,6 @@ html, body {
   background: url(bg.png); }
 
 #content {
-  border-top: 10px solid #333;
   padding-bottom: 80px; }
 
 .content {

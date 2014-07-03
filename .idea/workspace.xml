@@ -12,6 +12,13 @@
     <file path="/_footer.html.erb" changelist="fa47fea9-a4c0-4eb2-91f2-7724776bb58b" time="1394345915246" ignored="false" />
     <file path="/_projects.html.erb" changelist="fa47fea9-a4c0-4eb2-91f2-7724776bb58b" time="1392705063245" ignored="false" />
     <file path="/_skills.html.erb" changelist="fa47fea9-a4c0-4eb2-91f2-7724776bb58b" time="1392715814278" ignored="false" />
+    <file path="$PROJECT_DIR$/config/initializers/filter_parameter_logging.rb" changelist="fa47fea9-a4c0-4eb2-91f2-7724776bb58b" time="1400190843964" ignored="false" />
+    <file path="$PROJECT_DIR$/config/initializers/secret_token.rb" changelist="fa47fea9-a4c0-4eb2-91f2-7724776bb58b" time="1400190843964" ignored="false" />
+    <file path="$PROJECT_DIR$/config/initializers/session_store.rb" changelist="fa47fea9-a4c0-4eb2-91f2-7724776bb58b" time="1400190843964" ignored="false" />
+    <file path="$PROJECT_DIR$/config/initializers/mime_types.rb" changelist="fa47fea9-a4c0-4eb2-91f2-7724776bb58b" time="1400190843965" ignored="false" />
+    <file path="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" changelist="fa47fea9-a4c0-4eb2-91f2-7724776bb58b" time="1400190843965" ignored="false" />
+    <file path="$PROJECT_DIR$/config/initializers/inflections.rb" changelist="fa47fea9-a4c0-4eb2-91f2-7724776bb58b" time="1400190843965" ignored="false" />
+    <file path="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" changelist="fa47fea9-a4c0-4eb2-91f2-7724776bb58b" time="1400190843965" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +41,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/welcome/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="32" selection-start="1028" selection-end="1028" vertical-scroll-proportion="-21.75">
+            <state line="47" column="32" selection-start="1453" selection-end="1453" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -43,7 +50,7 @@
       <file leaf-file-name="_footer.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/welcome/_footer.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="40" selection-start="319" selection-end="319" vertical-scroll-proportion="0.10683761">
+            <state line="4" column="40" selection-start="224" selection-end="224" vertical-scroll-proportion="0.08547009">
               <folding />
             </state>
           </provider>
@@ -52,7 +59,7 @@
       <file leaf-file-name="_projects.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/welcome/_projects.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="8" selection-start="1269" selection-end="1269" vertical-scroll-proportion="-12.375">
+            <state line="40" column="8" selection-start="1269" selection-end="1269" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,6 +133,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -228,13 +237,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$USER_HOME$/yellow" />
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="Rails.Development: mullerivan">
@@ -423,13 +431,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1600" height="875" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2629199" sideWeight="0.60106385" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26679587" sideWeight="0.60106385" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39893618" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -565,37 +573,35 @@
         <state line="7" column="114" selection-start="371" selection-end="371" vertical-scroll-proportion="0.15718563" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="287" column="0" selection-start="8057" selection-end="8057" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/welcome/_skills.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="0" selection-start="2201" selection-end="2201" vertical-scroll-proportion="0.8717949">
-          <folding />
-        </state>
+        <state line="60" column="0" selection-start="2201" selection-end="2201" vertical-scroll-proportion="0.8717949" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/welcome/_projects.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="8" selection-start="1269" selection-end="1269" vertical-scroll-proportion="-12.375">
+        <state line="40" column="8" selection-start="1269" selection-end="1269" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/welcome/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="32" selection-start="1028" selection-end="1028" vertical-scroll-proportion="-21.75">
+        <state line="47" column="32" selection-start="1453" selection-end="1453" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/welcome/_footer.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="40" selection-start="319" selection-end="319" vertical-scroll-proportion="0.10683761">
+        <state line="4" column="40" selection-start="224" selection-end="224" vertical-scroll-proportion="0.08547009">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="287" column="0" selection-start="8057" selection-end="8057" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
