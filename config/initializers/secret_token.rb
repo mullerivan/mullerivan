@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Mullerivan::Application.config.secret_key_base = '7cc7cd8e20f24896bac87b98c03251fd62bda388a06ef5c80fe5966824eb4c8cebe9f91c0d5e1c8fc78ed3fcf35c0eccbb1af628daba8a9a6f3b85798fa2c6d3'
+Mullerivan::Application.config.secret_key_base = '5cb80559baee0fb2446fd7a64349e8b35317cabb501af1537817070d5c4756b112321587b1bd4a1a7af2d0ee4c06dfc1b8b42b3301a6f8cb306cd3b3530016a6'

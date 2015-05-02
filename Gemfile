@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 #heroku
 gem 'rails_12factor'
-
 # Use sqlite3 as the database for Active Record
 #gem 'mysql2'
 gem 'sqlite3'
