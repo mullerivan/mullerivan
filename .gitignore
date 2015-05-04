@@ -14,3 +14,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+Gemfile.lock
+passenger.4020.pid
+passenger.4020.pid.lock
