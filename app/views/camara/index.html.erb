@@ -1,11 +1,8 @@
 
-
-    <head>
+<head>
         <title>WebRTC Video Recording using MediaStreamRecorder</title>
-        
         <script src="https://cdn.webrtc-experiment.com/MediaStreamRecorder.js"></script>
 
-        
         <style>
             input {
                 border: 1px solid rgb(46, 189, 235);
@@ -19,53 +16,41 @@
         </style>
     </head>
     <body>
-        <h1>
-            <a href="https://www.webrtc-experiment.com/">WebRTC</a> Video Recording using <a href="https://github.com/streamproc/MediaStreamRecorder"
-                                     target="_blank">MediaStreamRecorder</a>
-        </h1>
-		
+        <h1> Video Recording using MediaStreamRecorder </h1>
         <div>
-            <label for="time-interval">Time Interval (milliseconds):</label>
-            <input type="text" id="time-interval" value="5000">
-            
             <label for="video-width">Video Width:</label>
             <input type="text" id="video-width" value="320">
-            
             <label for="video-height">Video Height:</label>
             <input type="text" id="video-height" value="240">
-            
             <button id="start-recording">Start Recording</button>
             <button id="stop-recording" disabled>Stop Recording</button>
+            <button id="snapshot" disabled>Snapshot</button>
+
+
         </div>
         <div id="videos-container">
         </div>
         <script>
             var mediaConstraints = { audio: !!navigator.mozGetUserMedia, video: true };
-            
-            document.querySelector('#start-recording').onclick = function() {
-                this.disabled = true;
-                navigator.getUserMedia(mediaConstraints, onMediaSuccess, onMediaError);
-            };
-            
-            document.querySelector('#stop-recording').onclick = function() {
-                this.disabled = true;
-                mediaRecorder.stop();
-            };
-            
+
             var mediaRecorder;
             function onMediaSuccess(stream) {
                 var video = document.createElement('video');
+                    video.setAttribute("id", "video-player");
                 var videoWidth = document.getElementById('video-width').value || 320;
                 var videoHeight = document.getElementById('video-height').value || 240;
                 video = mergeProps(video, {
-                    controls: true,
+                    controls: false,
                     width: videoWidth,
                     height: videoHeight,
                     src: URL.createObjectURL(stream)
                 });
+
                 video.play();
+
                 videosContainer.appendChild(video);
                 videosContainer.appendChild(document.createElement('hr'));
+
                 mediaRecorder = new MediaStreamRecorder(stream);
                 mediaRecorder.mimeType = 'video/webm'; // this line is mandatory
                 mediaRecorder.videoWidth  = videoWidth;
@@ -73,25 +58,22 @@
                 mediaRecorder.ondataavailable = function(blob) {
                     var a = document.createElement('a');
                     a.target = '_blank';
-                    a.innerHTML = 'Open Recorded Video No. ' + (index++) + ' (Size: ' + bytesToSize(blob.size) + ') Time Length: ' + getTimeLength(timeInterval);
+                    a.innerHTML = 'Open Recorded Video No. ' + (index++) + ' (Size: ' + bytesToSize(blob.size) + ') :';
                     a.href = URL.createObjectURL(blob);
                     videosContainer.appendChild(a);
                     videosContainer.appendChild(document.createElement('hr'));
                 };
-                
-                var timeInterval = document.querySelector('#time-interval').value;
-                if(timeInterval) timeInterval = parseInt(timeInterval);
-                else timeInterval = 5 * 1000;
+
                 // get blob after specific time interval
                 mediaRecorder.start(timeInterval);
                 
                 document.querySelector('#stop-recording').disabled = false;
+                document.querySelector('#snapshot').disabled = false;
             }
             function onMediaError(e) {
                 console.error('media error', e);
             }
-            var videosContainer = document.getElementById('videos-container');
-            var index = 1;
+
             
             // below function via: http://goo.gl/B3ae8c
             function bytesToSize(bytes) {
@@ -102,44 +84,70 @@
                return (bytes / Math.pow(k, i)).toPrecision(3) + ' ' + sizes[i];
             }
             
-            // below function via: http://goo.gl/6QNDcI
-            function getTimeLength(milliseconds) {
-                var data = new Date(milliseconds);
-                return data.getUTCHours()+" hours, "+data.getUTCMinutes()+" minutes and "+data.getUTCSeconds()+" second(s)";
-            }
-            
             window.onbeforeunload = function() {
                 document.querySelector('#start-recording').disabled = false;
             };
         </script>
-        
 
-        #ESTO VUELA VUELA
-        <pre style="border-left: 2px solid red; margin-left:2em; padding-left: 1em;">
-// cdn.webrtc-experiment.com/MediaStreamRecorder.js
+        <script>
+          //Global variables
+            var timeInterval = 7200 * 1000;
+            var videosContainer = document.getElementById('videos-container');
+            var index = 1;
+        //buttons controller
+        document.querySelector('#snapshot').onclick = function() {
+            var v = document.getElementsByTagName('video');
+            var c =capture(v[0]);
+            var dataURI = c.toDataURL('image/jpeg'); // can also use 'image/png'
+            var img = document.createElement('img');
+            img.src = dataURI;
+            videosContainer.appendChild(img);
+        }
 
-var mediaConstraints = {
-    audio: !!navigator.mozGetUserMedia, // if firefox (don't use for chrome)
-    video: true  // if firefox or chrome
-};
+        document.querySelector('#start-recording').onclick = function() {
+            this.disabled = true;
+            navigator.getUserMedia(mediaConstraints, onMediaSuccess, onMediaError);
+        };
 
-navigator.getUserMedia(mediaConstraints, onMediaSuccess, onMediaError);
+        document.querySelector('#stop-recording').onclick = function() {
+            this.disabled = true;
+            mediaRecorder.stop();
 
-function onMediaSuccess(stream) {
-    var mediaRecorder = new MediaStreamRecorder(stream);
-    mediaRecorder.mimeType = 'video/webm';
-    mediaRecorder.ondataavailable = function (blob) {
-        // POST/PUT "Blob" using FormData/XHR2
-        var blobURL = URL.createObjectURL(blob);
-        document.write('&lt;a href="' + blobURL + '"&gt;' + blobURL + '&lt;/a&gt;');
-    };
-    mediaRecorder.start(3000);
-}
+            document.querySelector('#start-recording').disabled = false;
+            document.querySelector('#snapshot').disabled = true;
+            //delete video element
+            var v = document.getElementsByTagName('video');
+            v = document.querySelector('#video-player');
+            videosContainer.removeChild(v);
+            //deleted
+        };
 
-function onMediaError(e) {
-    console.error('media error', e);
-}
-</pre>
-        
-        <a href="https://www.webrtc-experiment.com/" style="border-bottom: 1px solid red; color: red; font-size: 1.2em; position: absolute; right: 0; text-decoration: none; top: 0;">← WebRTC Experiments</a>
+
+
+          function capture(video, scaleFactor) {
+              if(scaleFactor == null){
+                  scaleFactor = 1;
+              }
+              var w = document.getElementById('video-width').value * scaleFactor;
+              var h = document.getElementById('video-height').value * scaleFactor;
+              var canvas = document.createElement('canvas');
+              canvas.width  = w;
+              canvas.height = h;
+              var ctx = canvas.getContext('2d');
+              ctx.drawImage(video, 0, 0, w, h);
+              return canvas;
+          }
+
+
+
+
+
+        </script>
+
+
+
+
+
+
+
     </body>
