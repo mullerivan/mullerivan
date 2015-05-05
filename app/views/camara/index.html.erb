@@ -1,0 +1,35 @@
+<script type="text/javascript">
+$(function() {
+  var sayCheese = new SayCheese('#container-element', { audio: true });
+  sayCheese.on('start', function() {
+    this.takeSnapshot();
+  });
+
+  sayCheese.on('snapshot', function(snapshot) {
+    // a snapshot has been taken, do something with it :)
+  });
+
+  sayCheese.start();
+});
+
+</script>
+
+<h1>Camara#index</h1>
+<p>Find me in app/views/camara/index.html.erb</p>
+
+<div id="camara">
+  <div class="content">
+
+	<div class="row">
+        <div class="span12 say-cheese">
+          <div id="say-cheese-container">
+            <div id="action-buttons" style="display: block;">
+              <button class="btn btn-success" id="take-snapshot">snap!</button>
+            </div>
+          </div>
+          <div id="say-cheese-snapshots"></div>
+        </div>
+      </div>
+
+  </div>
+</div>          <!--end camara-->
