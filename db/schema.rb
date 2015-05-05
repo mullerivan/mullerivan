@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150505165738) do
+ActiveRecord::Schema.define(version: 20150505173218) do
+
+  create_table "projects", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "projects", ["user_id"], name: "index_projects_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -30,5 +40,17 @@ ActiveRecord::Schema.define(version: 20150505165738) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "videos", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "project_id"
+    t.binary   "video"
+    t.decimal  "meters"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "videos", ["project_id"], name: "index_videos_on_project_id"
 
 end

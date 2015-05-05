@@ -1,4 +1,10 @@
 Mullerivan::Application.routes.draw do
+
+  resources :projects do
+    resources :videos
+  end
+
+
   devise_for :users
    get "camara/index"  
    get "welcome/index"

@@ -6,4 +6,7 @@ class User < ActiveRecord::Base
   def permitted_params
     params.permit admin_user: [:email, :password, :password_confirmation]
   end
+  def to_s
+    email
+  end
 end

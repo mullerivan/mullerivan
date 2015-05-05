@@ -1,0 +1,6 @@
+<%= simple_form_for @video do |f| %>
+    <%= f.input :name, required: true%>
+    <%= f.input :description, as: :text %>
+    <%= f.input :meters, required: true %>
+    <%= f.button :submit %>
+<% end %>
