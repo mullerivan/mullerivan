@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
 
 (function($, undefined) {
     // Shorthand to make it a little easier to call public rails functions from within rails.js
