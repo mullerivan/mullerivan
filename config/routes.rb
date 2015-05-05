@@ -1,8 +1,7 @@
 Mullerivan::Application.routes.draw do
-  post "headshot/capture" => 'headshot#capture', :as => :headshot_capture
+   get "camara/index"  
    get "welcome/index"
    get "welcom/index"
-#   resources :projects
    root 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
