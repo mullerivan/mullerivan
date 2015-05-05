@@ -1,4 +1,5 @@
 Mullerivan::Application.routes.draw do
+  devise_for :users
    get "camara/index"  
    get "welcome/index"
    get "welcom/index"
