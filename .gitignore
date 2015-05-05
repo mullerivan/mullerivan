@@ -17,3 +17,5 @@
 Gemfile.lock
 passenger.4020.pid
 passenger.4020.pid.lock
+public/assets/*
+public/assets/
