@@ -32,6 +32,28 @@ function onMediaSuccess(stream) {
         a.href = URL.createObjectURL(blob);
         videosContainer.appendChild(a);
         videosContainer.appendChild(document.createElement('hr'));
+
+        var fileType = 'video'; // or "audio"
+        var fileName = 'test.webm';  // or "wav" or "ogg"
+
+        var formData = new FormData();
+        formData.append(fileType + '-filename', fileName);
+        formData.append(fileType + '-blob', blob);
+
+        xhr('/camara/upload', formData, function (fileURL) {
+            window.open(fileURL);
+        });
+
+        function xhr(url, data, callback) {
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function () {
+                if (request.readyState == 4 && request.status == 200) {
+                    callback(location.href + request.responseText);
+                }
+            };
+            request.open('POST', url);
+            request.send(data);
+        }
     };
 
     // get blob after specific time interval

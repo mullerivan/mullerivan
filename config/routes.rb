@@ -9,6 +9,7 @@ Mullerivan::Application.routes.draw do
    get "camara/index"  
    get "welcome/index"
    get "welcom/index"
+   post 'camara/upload'
    root 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
