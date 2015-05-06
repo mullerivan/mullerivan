@@ -40,20 +40,11 @@ function onMediaSuccess(stream) {
         formData.append(fileType + '-filename', fileName);
         formData.append(fileType + '-blob', blob);
 
-        xhr('/camara/upload', formData, function (fileURL) {
+        send_video_ajax('/camara/upload', formData, function (fileURL) {
             window.open(fileURL);
         });
 
-        function xhr(url, data, callback) {
-            var request = new XMLHttpRequest();
-            request.onreadystatechange = function () {
-                if (request.readyState == 4 && request.status == 200) {
-                    callback(location.href + request.responseText);
-                }
-            };
-            request.open('POST', url);
-            request.send(data);
-        }
+     
     };
 
     // get blob after specific time interval
@@ -134,3 +125,66 @@ function capture(video, scaleFactor) {
 }
 
 
+
+   function send_video_ajax(url, data, callback) {
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function () {
+                if (request.readyState == 4 && request.status == 200) {
+                    callback(location.href + request.responseText);
+                }
+            };
+
+
+
+
+
+
+            $.ajax({
+                    url: url,  //Server script to process data
+                    type: 'POST',
+                    // xhr: function() {  // Custom XMLHttpRequest
+                    //     var myXhr = $.ajaxSettings.xhr();
+                    //     if(myXhr.upload){ // Check if upload property exists
+                    //         myXhr.upload.addEventListener('progress',progressHandlingFunction, false); // For handling the progress of the upload
+                    //     }
+                    //     return myXhr;
+                    // },
+                    //Ajax events
+                    // beforeSend: beforeSendHandler,
+                    // success: completeHandler,
+                    // error: errorHandler,
+                    // Form data
+                    data: data,
+                    //Options to tell jQuery not to process data or worry about content-type.
+                    cache: false,
+                    contentType: false,
+                    processData: false
+                });
+// Groso que te explica como hacerlo
+// https://stackoverflow.com/questions/166221/how-can-i-upload-files-asynchronously
+            // $.ajax({
+            //       method: "POST",
+            //       url: url,
+            //       // context: data
+            //       enctype: 'multipart/form-data',
+            //     data: {
+            //         file: data
+            //     },
+
+            //     }).done(function() {
+            //       alert('el video esta en casa')
+            //     });
+
+
+
+
+            // request.open('POST', url);
+            // request.send(data);
+        }
+
+
+function progressHandlingFunction(e){
+    if(e.lengthComputable){
+        $('progress').attr({value:e.loaded,max:e.total});
+    }
+}
