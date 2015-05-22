@@ -17,6 +17,19 @@ pre {
   padding: 10px;
   font-size: 11px;
 }
+.bio a{
+  color: cyan;
+  &:visited {
+    color:  blueviolet;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+ }
+
+  
+  }
+
 
 a {
   color: #000;
